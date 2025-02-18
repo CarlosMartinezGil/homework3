@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carlos Martinez - Portfolio</title>
+  <!-- Enlazamos el CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor principal con Grid -->
+  <div class="container">
+
+    <!-- HEADER (Step 1) -->
+    <header class="header">
+      <!-- Título y subtítulo -->
+      <h1>Carlos Martinez</h1>
+      <h2>Studying Computer Science, I will like to graduate this year</h2>
+    </header>
+
+    <!-- SIDEBAR con Flexbox (Step 2) -->
+    <nav class="sidebar">
+        <!-- Ítems de navegación -->
+        <ul>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      
+        <!-- STEP 7: Botón de descarga con position: absolute -->
+        <a 
+        href="https://drive.google.com/uc?export=download&id=1UKcJCahJglH6hGNYJrxEyh4SLyQ_0ETj" download="Carlos_Martinez_Resume.png" 
+          class="resume-button"
+        >
+          Download Resume
+        </a>
+      </nav>
+
+    <!-- MAIN CONTENT con scroll (Step 1) -->
+    <main class="main">
+      
+      <!-- SUMMARY (Step 3) -->
+      <section id="summary" class="summary">
+        <h3>Introduction</h3>
+        <p>Hello, I'm Carlos Martinez Gil</p>
+        <p>
+          I'm an exchange student at NAU. At my university in Spain, I did a bit of web programming,
+          learning some things about HTML and CSS, we had to make a simple page.
+        </p>
+        <p>I would like to graduate and work in America in the future.</p>
+      </section>
+      
+      <!-- EDUCATION (Step 3) -->
+      <section id="education" class="education">
+        <h3>Education</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Institution/Company</th>
+              <th>Degree/Position</th>
+              <th>Duration</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- rowspan: Combinando dos filas para 'University of Spain' -->
+              <td rowspan="2">University of Spain</td>
+              <td>Bachelor's in Computer Science</td>
+              <td>2018 - 2022</td>
+              <td>Completed core courses in programming, algorithms, and web development.</td>
+            </tr>
+            <tr>
+              <td>Exchange Program at NAU</td>
+              <td>2025</td>
+              <td>Studied advanced web development as part of the exchange program.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- EXPERIENCE (Step 3) -->
+      <section id="experience" class="experience">
+        <h3>Experience</h3>
+        <table border="1">
+          <tr>
+            <th>Events</th>
+            <th>Position</th>
+            <th>Date</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Hakatlon</td>
+            <td>Participant</td>
+            <td>October 2023</td>
+            <td>We were semi-finalists in a web application programming competition to create an app to teach space</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- SKILLS -->
+
+    <section id="skills" class="skills-section">
+        <h3>Skills</h3>
+        
+        <!-- Contenedor con display:flex -->
+        <div class="skillset">
+        <div class="skill-item">HTML/CSS</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">React</div>
+        <div class="skill-item">Git/GitHub</div>
+        <div class="skill-item">Problem-Solving</div>
+        <div class="skill-item">Teamwork</div>
+        <div class="skill-item">Quickly Googling Errors</div>
+        </div>
+    </section>
+
+
+      <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+    <h3>Projects</h3>
+    
+    <!-- Contenedor de la cuadrícula -->
+    <div class="projects-grid">
+        <!-- Primer Proyecto -->
+        <div class="project-item">
+        <h4>Project 1: <mark>My Personal Website</mark></h4>
+        <p>
+            A project developed with <strong>HTML5</strong> and <strong>CSS</strong>
+            to showcase my background and goals. It includes sections such as
+            <i>about me</i>, projects, and a contact form.
+        </p>
+        <img src="imagen.png" alt="Random photo of Homer" width="300" height="300">
+        <img src="imagen2.png" alt="Image of the planet" width="200" height="200">
+        </div>
+
+        <!-- Segundo Proyecto -->
+        <div class="project-item">
+        <h4>Project 2: <mark>Risk Simulation App</mark></h4>
+        <p>
+            An application that simulates the Risk board game where we used a
+            <ins>React</ins> frontend and a <b>database</b>. It allows users to <b>create</b>,
+            <b>edit</b>, and <b>delete</b> matches.
+        </p>
+        <img src="imagen3.png" alt="Perry the Platypus" width="300" height="300">
+        <img src="imagen4.png" alt="Computer on fire" width="200" height="200">
+        </div>
+    </div>
+    </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h3>Contact Information</h3>
+        <p>
+          <strong>Email:</strong> <a href="mailto:elonmusk@spacex.com">elonmusk@spacex.com</a><br>
+          <strong>Phone:</strong> <a href="tel:+1234567890">+1 234-567-890</a><br>
+          <strong>GitHub:</strong> <a href="https://github.com/torvalds" target="_blank">github.com/torvalds</a><br>
+          <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/satyanadella" target="_blank">linkedin.com/in/satyanadella</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Carlos Martinez</p>
+
+      <!-- STEP 6: Información de contacto con position: absolute -->
+      <div class="contact-info">
+        <p>
+          <strong>Email:</strong> <a href="mailto:elonmusk@spacex.com">elonmusk@spacex.com</a><br>
+          <strong>Phone:</strong> <a href="tel:+1234567890">+1 234-567-890</a><br>
+          <strong>GitHub:</strong> <a href="https://github.com/torvalds" target="_blank">github.com/torvalds</a><br>
+          <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/satyanadella" target="_blank">linkedin.com/in/satyanadella</a>
+        </p>
+      </div>
+    </footer>
+    
+  </div>
+</body>
+</html>

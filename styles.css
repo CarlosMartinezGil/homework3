@@ -1,0 +1,248 @@
+/* ====== STEP 1: Grid Layout (4 Secciones) ====== */
+.container {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #34495e;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .main {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* ====== STEP 2: Flexbox en la Barra Lateral (Sidebar) ====== */
+  .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .sidebar a:hover {
+    background-color: #666;
+  }
+  
+  /* ====== STEP 3: Decorate Summary, Education, and Experience ====== */
+  /* Para 'Introduction' la clase summary */
+  .summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 4px solid #3498db;
+  }
+  
+  /* Para Education */
+  .education {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 4px solid #e67e22;
+  }
+  
+  /* Para Experience */
+  .experience {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 4px solid #9b59b6;
+  }
+  
+  .education table,
+  .experience table {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .education th,
+  .experience th {
+    background-color: #eee;
+    padding: 5px;
+  }
+  
+  /* ====== Ajustes adicionales de estilo ====== */
+  h3 {
+    margin-top: 0;
+  }
+  
+  hr {
+    margin: 20px 0;
+  }
+
+  .skills-section {
+    margin-bottom: 20px;   /* Espacio debajo de la sección */
+    padding: 15px;         /* Separación interna */
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    border-radius: 5px;
+  }
+  
+  /* Contenedor de habilidades con Flexbox */
+  .skillset {
+    display: flex;
+    flex-wrap: wrap;                 /* Permite que los elementos salten de línea */
+    gap: 10px;                       /* Espacio entre cada skill-item */
+    justify-content: center;         /* Centra horizontalmente las habilidades */
+    align-items: center;             /* Alinea verticalmente las habilidades */
+    margin-top: 10px;                /* Separación respecto al título */
+  }
+  
+  /* Cada ítem de habilidad */
+  .skill-item {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+  }
+
+
+/* ====== STEP 5: Grid Layout para Projects ====== */
+.projects-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #2ecc71; /* verde */
+    border-radius: 5px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* espacio entre columnas y filas */
+    margin-top: 10px;
+  }
+  
+  .project-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Opcional: Ajustar imágenes en project-item */
+  .project-item img {
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+    /*Part 6 */
+    .footer {
+        grid-area: footer;
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative; /* IMPORTANTE */
+        box-sizing: border-box;
+      }
+      
+      /* Contact Info dentro del footer en posición absoluta */
+      .contact-info {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        
+        /* Estilos visuales */
+        background-color: rgba(255, 255, 255, 0.15); /* fondo semitransparente */
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      /* Paso 7 */
+      .sidebar {
+        grid-area: sidebar;
+        background-color: #34495e;
+        padding: 20px;
+        overflow-y: auto;
+        position: relative; /* IMPORTANTE para alojar al botón absoluto */
+      }
+      
+      /* STEP 7: Resume Button con posición absoluta */
+      .resume-button {
+        position: absolute;
+        bottom: 20px;  /* ubícalo donde quieras */
+        left: 20px;
+      
+        background-color: #e74c3c;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s, transform 0.3s;
+      }
+      
+      .resume-button:hover {
+        background-color: #c0392b;
+        transform: scale(1.05);
+      }
+  
+  /* ====== Opcional: Responsividad básica ====== */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      height: auto; /* permitir expandirse */
+    }
+    
+    .sidebar {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+
+  
