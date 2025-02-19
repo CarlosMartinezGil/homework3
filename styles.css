@@ -1,4 +1,4 @@
-/* ====== STEP 1: Grid Layout (4 Secciones) ====== */
+/*  STEP 1:  (4 Secciones)  */
 .container {
     display: grid;
     grid-template-areas: 
@@ -42,7 +42,7 @@
     padding: 10px;
   }
   
-  /* ====== STEP 2: Flexbox en la Barra Lateral (Sidebar) ====== */
+  /* STEP 2: */
   .sidebar ul {
     list-style: none;
     margin: 0;
@@ -66,8 +66,7 @@
     background-color: #666;
   }
   
-  /* ====== STEP 3: Decorate Summary, Education, and Experience ====== */
-  /* Para 'Introduction' la clase summary */
+  /*  STEP 3:  */
   .summary {
     margin-bottom: 20px;
     padding: 15px;
@@ -75,7 +74,6 @@
     border-left: 4px solid #3498db;
   }
   
-  /* Para Education */
   .education {
     margin-bottom: 20px;
     padding: 15px;
@@ -83,7 +81,7 @@
     border-left: 4px solid #e67e22;
   }
   
-  /* Para Experience */
+
   .experience {
     margin-bottom: 20px;
     padding: 15px;
@@ -103,7 +101,7 @@
     padding: 5px;
   }
   
-  /* ====== Ajustes adicionales de estilo ====== */
+  /* ====== More style====== */
   h3 {
     margin-top: 0;
   }
@@ -113,21 +111,20 @@
   }
 
   .skills-section {
-    margin-bottom: 20px;   /* Espacio debajo de la sección */
-    padding: 15px;         /* Separación interna */
+    margin-bottom: 20px;   
+    padding: 15px;         
     background-color: #f9f9f9;
     border-left: 4px solid #3498db;
     border-radius: 5px;
   }
   
-  /* Contenedor de habilidades con Flexbox */
   .skillset {
     display: flex;
-    flex-wrap: wrap;                 /* Permite que los elementos salten de línea */
-    gap: 10px;                       /* Espacio entre cada skill-item */
-    justify-content: center;         /* Centra horizontalmente las habilidades */
-    align-items: center;             /* Alinea verticalmente las habilidades */
-    margin-top: 10px;                /* Separación respecto al título */
+    flex-wrap: wrap;                 
+    gap: 10px;                       
+    justify-content: center;         
+    align-items: center;           
+    margin-top: 10px;                
   }
   
   /* Cada ítem de habilidad */
@@ -141,19 +138,19 @@
   }
 
 
-/* ====== STEP 5: Grid Layout para Projects ====== */
+/*  STEP 5:  */
 .projects-section {
     margin-bottom: 20px;
     padding: 15px;
     background-color: #f9f9f9;
-    border-left: 4px solid #2ecc71; /* verde */
+    border-left: 4px solid #2ecc71;
     border-radius: 5px;
   }
   
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* espacio entre columnas y filas */
+    gap: 20px; 
     margin-top: 10px;
   }
   
@@ -165,7 +162,6 @@
     text-align: center;
   }
   
-  /* Opcional: Ajustar imágenes en project-item */
   .project-item img {
     margin: 5px 0;
     border-radius: 5px;
@@ -178,18 +174,16 @@
         color: white;
         text-align: center;
         padding: 20px;
-        position: relative; /* IMPORTANTE */
+        position: relative; 
         box-sizing: border-box;
       }
       
-      /* Contact Info dentro del footer en posición absoluta */
       .contact-info {
         position: absolute;
         bottom: 10px;
         right: 20px;
         
-        /* Estilos visuales */
-        background-color: rgba(255, 255, 255, 0.15); /* fondo semitransparente */
+        background-color: rgba(255, 255, 255, 0.15);
         color: #fff;
         padding: 10px 15px;
         border-radius: 8px;
@@ -202,13 +196,13 @@
         background-color: #34495e;
         padding: 20px;
         overflow-y: auto;
-        position: relative; /* IMPORTANTE para alojar al botón absoluto */
+        position: relative;
       }
       
-      /* STEP 7: Resume Button con posición absoluta */
+      /* STEP 7*/
       .resume-button {
         position: absolute;
-        bottom: 20px;  /* ubícalo donde quieras */
+        bottom: 20px;  
         left: 20px;
       
         background-color: #e74c3c;
@@ -225,24 +219,5 @@
         transform: scale(1.05);
       }
   
-  /* ====== Opcional: Responsividad básica ====== */
-  @media (max-width: 768px) {
-    .container {
-      grid-template-areas:
-        "header"
-        "sidebar"
-        "main"
-        "footer";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr auto;
-      height: auto; /* permitir expandirse */
-    }
-    
-    .sidebar {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-
 
   
